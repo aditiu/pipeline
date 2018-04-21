@@ -27,11 +27,6 @@ pipeline {
                  
 	    }	    
         }
-	stage('Deploy') {
-            steps {
-                echo 'Deploying....'
-	      build job: 'AutomatedDeploymentTest'
-            }
-        }
+	
     }
 }
