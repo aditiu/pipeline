@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Compile') {
             steps {
-                withMaven(maven : 'Maven 3.5.2'){
+                maven(maven : 'Maven 3.5.2'){
                 bat 'mvn compile' 
 		}
             }
@@ -12,7 +12,7 @@ pipeline {
         stage('Test') {
             steps {
                
-               withMaven(maven : 'Maven 3.5.2'){
+               maven(maven : 'Maven 3.5.2'){
                 bat 'mvn test' 
 		}
                 
@@ -21,7 +21,7 @@ pipeline {
         stage('Package') {
             steps {
                 
-               withMaven(maven : 'Maven 3.5.2'){
+               maven(maven : 'Maven 3.5.2'){
                 bat 'mvn package' 
 		}
                  
